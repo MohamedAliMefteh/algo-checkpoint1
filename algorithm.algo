@@ -1,0 +1,28 @@
+ALGORITHM checkpoint
+VAR
+    char,vowels:INTEGER:=0;
+    words:INTEGER:=1;
+    i:INTEGER;
+    sentence:STRING;
+BEGIN
+    write("enter a sentence")
+    READ(sentence)
+    WHILE (sentence(i) <> ".") DO
+        char=char+1;
+        IF (sentence(i)=" ") THEN
+            words = words + 1;
+        END_IF
+        IF (sentence(i)=("a","e","i","o","u")) THEN
+            vowels = vowels + 1;
+        END_IF
+        i++;
+    END_WHILE
+    
+write(char);
+write(words);
+write(vowels);
+
+END
+
+
+
